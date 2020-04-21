@@ -15,7 +15,7 @@ git config user.name "Grumpy Old Man"
 and what your email address is:
 
 ```copy-and-edit
-git config user.name "grumpy-old-man@example.com"
+git config user.email "grumpy-old-man@example.com"
 ```
 
 Next set as the remote origin for this git workspace, the GitHub repository containing your workshop content. In this example HTTPS is used, which means you would need to create a GitHub personal access token in order to push back changes to GitHub. This is preferred over using SSH and adding your private key to this workspace, but you can do the latter if you want to.
