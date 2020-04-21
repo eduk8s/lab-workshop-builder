@@ -48,4 +48,6 @@ You can now work on your workshop content using the embedded editor, using eithe
 
 If at any time you make changes to the ``workshop/*.yaml`` files to add new pages, run ``restart-workshop`` again and reload the browser page.
 
+If you are just changing content of an existing page, you can reload the workshop content frame using the browser context menu, or press the <span class="fas fa-sync-alt"></span> button top right of the workshop dashboard while holding down the shift key.
+
 Have fun!!!
