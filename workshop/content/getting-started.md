@@ -36,18 +36,26 @@ and check out the master branch so you have the current content.
 git checkout origin/master -b master
 ```
 
-So that your workshop content is now used, restart the workshop content renderer by running:
+If you have a ``workshop/setup.d`` script directory, run:
+
+```execute
+rebuild-workshop
+```
+
+so that any files specific to the session are regenerated.
+
+Finally, to have your workshop content be picked up, restart the workshop content renderer by running:
 
 ```execute
 restart-workshop
 ```
 
-You view your workshop content, reload the whole browser page.
+To go to the start of your workshop content, click on the home icon on the left side above the workshop content.
 
 You can now work on your workshop content using the embedded editor, using either the editor or the command line git client to commit and push back changes to your GitHub repository.
 
 If at any time you make changes to the ``workshop/*.yaml`` files to add new pages, run ``restart-workshop`` again and reload the browser page.
 
-If you are just changing content of an existing page, you can reload the workshop content frame using the browser context menu, or press the <span class="fas fa-sync-alt"></span> button top right of the workshop dashboard while holding down the shift key.
+If you are just changing content of an existing page, you can reload the workshop content frame using the browser context menu, or press the <span class="fas fa-sync-alt"></span> reload button top right of the workshop dashboard while holding down the shift key.
 
 Have fun!!!
