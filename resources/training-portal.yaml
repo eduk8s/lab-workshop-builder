@@ -4,6 +4,8 @@ metadata:
   name: lab-workshop-builder
 spec:
   portal:
+    registration:
+      enabled: false
     capacity: 1
   workshops:
   - name: lab-workshop-builder
