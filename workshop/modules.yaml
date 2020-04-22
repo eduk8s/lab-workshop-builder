@@ -1,7 +1,7 @@
 modules:
     getting-started:
         name: Getting Started
-        exit_sign: Restart Environment
+        exit_sign: Exit Environment
 
 config:
   vars:
