@@ -22,6 +22,8 @@ spec:
         enabled: true
       docker:
         enabled: true
+      webdav:
+        enabled: true
     patches:
       containers:
       - name: workshop
