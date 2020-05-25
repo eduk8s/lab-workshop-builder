@@ -11,6 +11,8 @@ spec:
     image: quay.io/eduk8s/lab-workshop-builder:master
   session:
     budget: medium
+    resources:
+      storage: 5Gi
     applications:
       terminal:
         enabled: true
@@ -19,22 +21,14 @@ spec:
         enabled: true
       editor:
         enabled: true
+        plugins:
+          enabled: true
       registry:
         enabled: true
       docker:
         enabled: true
       webdav:
         enabled: true
-    patches:
-      containers:
-      - name: workshop
-        volumeMounts:
-        - name: data
-          mountPath: /home/eduk8s
-      volumes:
-      - name: data
-        persistentVolumeClaim:
-          claimName: $(session_namespace)-builder
     objects:
     - apiVersion: rbac.authorization.k8s.io/v1
       kind: RoleBinding
@@ -49,14 +43,3 @@ spec:
       - kind: ServiceAccount
         namespace: $(workshop_namespace)
         name: $(service_account)
-    - apiVersion: v1
-      kind: PersistentVolumeClaim
-      metadata:
-        namespace: $(workshop_namespace)
-        name: $(session_namespace)-builder
-      spec:
-        accessModes:
-        - ReadWriteOnce
-        resources:
-          requests:
-            storage: 5Gi
