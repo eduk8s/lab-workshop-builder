@@ -10,7 +10,8 @@ spec:
   content:
     image: quay.io/eduk8s/lab-workshop-builder:master
   session:
-    budget: medium
+    namespaces:
+      budget: medium
     resources:
       storage: 5Gi
     applications:
